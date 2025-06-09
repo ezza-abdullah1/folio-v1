@@ -12,7 +12,7 @@ const About = () => {
       <div className="mx-auto flex w-[90%] flex-col items-center justify-center lg:max-w-[1212.8px]">
         <AnimatedTitle
           text={
-            "I MAKE BRANDS BEAUTIFUL, WEBSITES POWERFUL AND CONTENT CAPTIVATING."
+            "I MAKE DATA INSIGHTFUL, MODELS INTELLIGENT, AND SYSTEMS TRANSFORMATIVE."
           }
           className={
             "mb-10 text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-[#e4ded7] sm:text-[45px] md:mb-16 md:text-[60px] lg:text-[80px]"
@@ -25,86 +25,68 @@ const About = () => {
           <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-medium  leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[20px] md:leading-relaxed lg:mb-16  lg:max-w-[90%] lg:text-[24px] ">
             <AnimatedBody
               text={
-                "I specialize in crafting high-converting landing pages and websites for SaaS, Web3 & AI startups. I'm passionate about building software that makes a difference."
+                "A Data Scientist and AI Engineer with a passion for building smart, data-driven solutions. I hold a Bachelor's degree in Data Science from FAST NUCES, Lahore, Pakistan."
               }
             />
             <AnimatedBody
               text={
-                "Whether I’m designing a sleek user interface or coding a complex application, I’m always striving to create something unique and innovative. I love experimenting with new technologies and staying up-to-date with the latest trends in the tech world."
+                "As a Research Assistant at FAST NUCES, I've explored the impact of Generative AI tools on student learning and engagement. In my experience, I focused on implementing and optimizing machine learning models, achieving 90% predictive accuracy on real-world datasets. My work involved enhancing model performance through robust data preprocessing and feature engineering , and significantly improving trend identification through data visualization."
               }
               className={"hidden"}
             />
             <AnimatedBody
               text={
-                "Beyond my work as a frontend developer, I'm an active leader in tech communities on campus. As a member of the Google Developer Student Clubs and Microsoft Learn Student Ambassadors, I've led workshops and mentored other students."
+                "Beyond my academic and internship experience, I also work as a freelancer, providing intelligent solutions to global clients via Upwork, including those from the USA, and Europe. My expertise covers various domains such as building machine/deep learning models, Large Language Models (LLMs), Explainable AI (XAI), custom chatbot development, fine-tuning models, natural language processing (NLP), computer vision, and data analytics."
               }
             />
             <AnimatedBody
               text={
-                "When I'm not coding, you can find me binge-watching anime, hanging out with friends, cheering on Manchester United, or discovering new music in my favorite genres like RnB, UK Drill, and Chill Rap."
-              }
-            />
-            <AnimatedBody
-              text={
-                "I'm currently working on some exciting projects that I can't wait to share with you. But I’m always open to new opportunities and collaborations."
+                "I hold certifications in Generative AI Engineering, Machine Learning with Python, Deep Learning, and Data Visualization with Python. I love transforming real-world problems into practical AI solutions and strive to blend research-level AI with deployable systems. If you're looking for someone who can make a meaningful impact, let's connect."
               }
             />
           </div>
 
           <div className="mb-24 flex w-[100%] flex-col gap-4 text-[18px] font-normal leading-relaxed tracking-wide text-[#e4ded7]/80 sm:mb-32 md:mb-40 md:gap-6 md:text-[16px] md:leading-normal lg:mt-0 lg:mb-16 lg:max-w-[30%] lg:text-[18px]">
             <div className="flex flex-col gap-4 md:gap-3">
-              <AnimatedTitle
-                text={"Frontend Tools"}
+              <h2
                 className={
-                  "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
+                  "text-[24px] font-bold text-[#e4ded7] md:text-[30px] lg:text-[20px]"
                 }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
+              >
+                Programming Languages
+              </h2>
+              <AnimatedBody text={"Python, C++, SQL."} />
+            </div>
+            <div className="flex flex-col gap-3">
+              <h2
+                className={
+                  "text-[24px] font-bold text-[#e4ded7] md:text-[30px] lg:text-[20px]"
+                }
+              >
+                Machine Learning Frameworks
+              </h2>
               <AnimatedBody
                 text={
-                  "JavaScript (ES6+), React, Next.js, TypeScript, Prismic CMS, Redux, Redux Toolkit, React Testing Library, Vitetest, HTML5, Git/GitHub, NextAuth, Formik."
+                  "Scikit-learn, tensorflow, keras, pytorch, Hugging Transformers, NLTK, Computer vision, OpenCV, YOLO"
                 }
               />
             </div>
             <div className="flex flex-col gap-3">
-              <AnimatedTitle
-                text={"UI Libraries"}
+              <h2
                 className={
-                  "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
+                  "text-[24px] font-bold text-[#e4ded7] md:text-[30px] lg:text-[20px]"
                 }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
+              >
+                Data Analysis and visualization
+              </h2>
               <AnimatedBody
                 text={
-                  "CSS3/SCSS/SASS, Tailwind CSS, Material UI, Framer Motion, GSAP, Bootstrap, Chart.js."
+                  "Matplotlib, Seaborn, Plotly, Tableau, powerBI, Pandas, Numpy, Apache spark"
                 }
-              />
-            </div>
-            <div className="flex flex-col gap-3">
-              <AnimatedTitle
-                text={"Design Tools"}
-                className={
-                  "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
-                }
-                wordSpace={"mr-[0.25em]"}
-                charSpace={"mr-[0.01em]"}
-              />
-              <AnimatedBody
-                text={
-                  "Figma, Framer, FigJam, Adobe XD, ProtoPie, Adobe Photoshop, UX Research, UI Design, Prototyping."
-                }
+                className="w-full whitespace-pre-line break-words text-[18px] md:text-[16px] lg:text-[18px]"
               />
             </div>
           </div>
-        </div>
-        <div className="mt-10 flex flex-col md:-mt-0 lg:mt-28">
-          <SongCarousel />
-          <AnimatedBody
-            text="A few songs I can recommend if you're looking for some fresh tunes :)"
-            className="absolute bottom-10 right-0 left-0 mx-auto w-[90%] text-center text-[14px] font-semibold uppercase text-[#e4ded7] sm:w-[500px] md:bottom-12 md:w-[550px] md:text-[16px] "
-          />
         </div>
       </div>
     </section>

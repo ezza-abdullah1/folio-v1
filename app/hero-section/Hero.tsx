@@ -4,7 +4,7 @@ import { monaSans } from "../fonts/monaSans";
 import { motion } from "framer-motion";
 import { imageAnimation, bodyAnimation } from "../animations/animations";
 import AnimatedWords from "../animations/AnimatedWords";
-import profile from "../../public/profile.webp";
+import profile from "../../public/header1.png";
 
 const Hero = () => {
   return (
@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="absolute top-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
         <div>
           <Link
-            href="https://cal.com/victorwilliams/30min"
+            href="https://www.upwork.com/freelancers/~01e1539123e8154286"
             target="_blank"
             aria-label="BOOK A CALL"
           >
@@ -27,14 +27,14 @@ const Hero = () => {
               className="hidden rounded-md border-2 border-[#e4ded7] py-2 px-4 text-[14px] font-semibold text-[#e4ded7] sm:block  md:text-[16px] lg:block"
               variants={bodyAnimation}
             >
-              BOOK A CALL
+              LET'S WORK TOGETHER
             </motion.button>
           </Link>
         </div>
 
         <div className="flex gap-10 text-[#e4ded7] sm:gap-12 md:gap-14 lg:gap-14">
           <Link
-            href="https://github.com/victorcodess"
+            href="https://github.com/abd84"
             target="_blank"
             aria-label="View GitHub Profile"
           >
@@ -42,11 +42,11 @@ const Hero = () => {
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}
             >
-              GH
+              GITHUB
             </motion.p>
           </Link>
           <Link
-            href="https://www.linkedin.com/in/victor-williams-chukwudi/"
+            href="https://www.linkedin.com/in/abdnaeem84/"
             target="_blank"
             aria-label="View LinkedIn Profile"
           >
@@ -54,31 +54,7 @@ const Hero = () => {
               className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
               variants={bodyAnimation}
             >
-              LN
-            </motion.p>
-          </Link>
-          <Link
-            href="https://twitter.com/victorwill__"
-            target="_blank"
-            aria-label="View Twitter Profile"
-          >
-            <motion.p
-              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
-              variants={bodyAnimation}
-            >
-              TW
-            </motion.p>
-          </Link>
-          <Link
-            href="https://contra.com/victorwilliams"
-            target="_blank"
-            aria-label="View Contra Profile"
-          >
-            <motion.p
-              className="text-[16px] font-bold text-[#e4ded7] md:text-[16px]"
-              variants={bodyAnimation}
-            >
-              CO
+              LINKEDIN
             </motion.p>
           </Link>
         </div>
@@ -89,7 +65,7 @@ const Hero = () => {
           className={`relative flex flex-col items-center justify-center ${monaSans.className}`}
         >
           <AnimatedWords
-            title="VICTOR WILLIAMS"
+            title="Abdullah Naeem"
             style="inline-block overflow-hidden pt-1 -mr-4 sm:-mr-5 md:-mr-7 lg:-mr-9 -mb-1 sm:-mb-2 md:-mb-3 lg:-mb-4"
           />
           <motion.div
@@ -118,16 +94,7 @@ const Hero = () => {
           variants={bodyAnimation}
         >
           <p className="z-50 text-center text-[16px] font-medium text-[#e4ded7] md:text-[20px] lg:text-left">
-            Frontend Engineer and Web Designer, prev at{" "}
-            <Link
-              href="https://www.korahq.com/"
-              target="_blank"
-              className="underline underline-offset-2 hover:no-underline"
-              aria-label="Kora Website"
-            >
-              Kora,
-            </Link>{" "}
-            currently available for work.
+            Data Scientist and AI/ML Engineer. Currently available for work.
           </p>
         </motion.div>
 
@@ -136,8 +103,7 @@ const Hero = () => {
           variants={bodyAnimation}
         >
           <p className="text-right text-[16px] font-semibold text-[#e4ded7] md:text-[20px]">
-            Focused on interfaces and experiences, working remotely from Lagos,
-            Nigeria.
+            Focused on tranforming raw data into real world intelligence
           </p>
         </motion.div>
       </div>

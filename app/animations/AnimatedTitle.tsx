@@ -69,7 +69,7 @@ export default function AnimatedTitle({
               delayChildren: index * 0.25,
               staggerChildren: 0.05,
             }}
-            className={`inline-block whitespace-nowrap ${wordSpace}`}
+            className={`inline-block ${wordSpace}`}
           >
             {word.split("").map((character, index) => {
               return (

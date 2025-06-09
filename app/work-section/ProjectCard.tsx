@@ -4,7 +4,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ProjectProps } from "./projectDetails";
 import Link from "next/link";
 import Image from "next/image";
-import AnimatedTitle from "../animations/AnimatedTitle";
 import AnimatedBody from "../animations/AnimatedBody";
 import { motion } from "framer-motion";
 
@@ -36,6 +35,7 @@ const ProjectCard = ({
       <Image
         src={image}
         alt={name}
+        style={{ borderRadius: "16px" }}
         className={`absolute -bottom-2 w-[70%] sm:w-[85%] md:w-[60%] lg:max-w-[55%] ${
           id % 2 === 0 ? "right-0" : "left-0"
         }`}
@@ -108,31 +108,32 @@ const ProjectCard = ({
             : "left-10 top-32 ml-0 md:mr-12 lg:top-52 lg:ml-4"
         } mb-10  md:mb-16 lg:mb-14 `}
       >
-        <AnimatedTitle
-          text={name}
+        {/* Project Title */}
+        <h2
           className={
-            "max-w-[90%] text-[40px] leading-none text-white md:text-[44px] md:leading-none lg:max-w-[450px] lg:text-[48px] lg:leading-none"
+            "max-w-[90%] text-[28px] leading-tight text-white sm:text-[32px] md:text-[40px] lg:max-w-[450px] lg:text-[48px]"
           }
-          wordSpace={"mr-[0.25em]"}
-          charSpace={"-mr-[0.01em]"}
-        />
+        >
+          {name}
+        </h2>
+        {/* Project Description */}
         <AnimatedBody
           text={description}
           className={
             "mt-4 w-[90%] max-w-[457px] text-[16px] font-semibold text-[#95979D] "
           }
         />
-        <div className="mt-9 flex gap-4">
+        {/* Technologies */}
+        <div className="mt-9 flex flex-wrap gap-2 sm:gap-4">
           {technologies.map((tech, id) => (
-            <AnimatedTitle
-              text={tech}
-              wordSpace={"mr-[0.25em]"}
-              charSpace={"mr-[0.01em]"}
+            <span
               key={id}
               className={
-                "text-[14px] font-bold uppercase md:text-[16px] lg:text-[18px] "
+                "whitespace-nowrap rounded-lg px-3 py-1 text-[13px] font-bold uppercase tracking-wide sm:text-[16px] lg:text-[18px]"
               }
-            />
+            >
+              {tech}
+            </span>
           ))}
         </div>
       </div>

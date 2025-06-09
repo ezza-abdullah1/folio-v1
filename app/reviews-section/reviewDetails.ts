@@ -1,68 +1,43 @@
 import { StaticImageData } from "next/image";
-import alex from "../../public/samuel.avif";
-import jerry from "../../public/jerry.avif";
+import NU from "../../public/National_University_of_Computer_and_Emerging_Sciences_logo.png";
+import BW from "../../public/thebytewise_logo.jpeg";
 import mauro from "../../public/mauro.jpeg";
 import alan from "../../public/alan.jpeg";
 import olamide from "../../public/olamide.jpeg";
 import umar from "../../public/umar.jpeg";
 
-export type reviewProps = {
+export type WorkExperienceProps = {
   name: string;
-  role: string;
   company: string;
+  date: string;
+  details: string;
   profileImg: StaticImageData;
-  testimonial: string;
-  index: number;
 };
 
-export const reviewDetails = [
+export const workExperiences = [
   {
-    name: "Samuel Alex",
-    role: "Product Designer",
-    company: "Umoja Linn",
-    profileImg: alex,
-    testimonial:
-      "Victor is seriously one of the best frontend developers I've ever worked with. He's incredibly talented, super easy to work with, and always goes above and beyond.",
+    name: "Undergraduate Research Assistant - LLMs",
+    company: "FAST NUCES Lahore",
+    date: "Feb 2025 - Present",
+    details:
+      "Fine-tuned pre-trained LLMs on domain-specific data, improving NLP benchmark performance. Collaborating on research addressing LLM challenges, including bias, ethics, and fairness.",
+    profileImg: NU,
   },
   {
-    name: "Jeremiah Oloyede",
-    role: "Founder",
-    company: "Crown Branding Agency",
-    profileImg: jerry,
-    testimonial:
-      "Victor's work is truly outstanding, and I can't recommend him enough! He completely transformed our branding agency's website. Since launch, we've seen a significant jump in website traffic and, crucially, conversions.",
+    name: "Undergraduate Teacher Assistant",
+    company: "FAST NUCES Lahore",
+    date: "Jan 2025 - Present",
+    details:
+      "Teaching Assistant for Software Engineering (CS-2004). Guided students through complex programming concepts, and assisted in debugging and problem-solving. Evaluated assignments, held office hours, and collaborated with faculty to improve student learning experiences.",
+    profileImg: NU,
   },
   {
-    name: "Mauro Reis",
-    role: "CEO",
-    company: "Meuclone Digital",
-    profileImg: mauro,
-    testimonial:
-      "Outstanding professional, developed our startup's website and delivered it in a very short time and with high quality.",
+    name: "Data Science Intern",
+    company: "Bytewise Limited",
+    date: "May 2024 - Sep 2024",
+    details:
+      "Built ML models with 90% accuracy using regression, classification, clustering, and neural networks. Enhanced performance through data preprocessing and feature engineering. Fine-tuned deep models like ResNet-150 and EfficientNet-B on real-world data.",
+    profileImg: BW,
   },
-  {
-    name: "Umar Abdullahi",
-    role: "Head of Engineering",
-    company: "Mono",
-    profileImg: umar,
-    testimonial:
-      "Victor is hardworking and has great sense of ownership. He was able to contribute in engineering excellent user interfaces and user experiences at Mono. I’m confident he will be a great asset to any engineering team.",
-  },
-  {
-    name: "Olamide Sholanke",
-    role: "Senior Frontend Engineer",
-    company: "Mono",
-    profileImg: olamide,
-    testimonial:
-      "I had the pleasure of working with Victor on a frontend development project at Mono, and I highly recommend him. He consistently delivered high-quality code, and brought a proactive and creative approach to problem-solving.",
-  },
-  {
-    name: "Alan Franciskovic",
-    role: "Sales Specialist",
-    company: "Croatia Osiguranje d.d",
-    profileImg: alan,
-    testimonial:
-      "Very talented and amazing freelancer. Very easy to communicate with, pleasure to work with. Outstanding attention to detail, and works as fast as possible while also delivering amazing work.",
-  },
-  
+ 
 ];

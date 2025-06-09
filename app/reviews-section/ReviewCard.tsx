@@ -1,4 +1,4 @@
-import { reviewProps } from "./reviewDetails";
+import { WorkExperienceProps } from "./reviewDetails";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
@@ -8,66 +8,66 @@ import profile from "../../public/samuel.avif";
 import slash from "../../public/review-slash.svg";
 import { motion } from "framer-motion";
 
-const BlogCard = ({
+const WorkCard = ({
   name,
-  role,
   company,
+  date,
+  details,
   profileImg,
-  testimonial,
-  index,
-}: reviewProps) => {
-  const abbreviateName = (name: string): string => {
-    const [firstName, lastName] = name.split(" ");
-    return `${firstName} ${lastName[0]}.`;
-  };
-
+}: WorkExperienceProps) => {
   return (
     <motion.div
-    initial={{ opacity: 0, y: 10 }}
-    whileInView={{
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.7,
-        delay: 0.1 * index,
-        ease: [0.44, 0, 0.22, 0.99],
-      },
-    }}
-    viewport={{
-      amount: "some",
-      once: true,
-    }}
-      className="relative flex h-[473px] w-[100%] flex-col items-start justify-between rounded-[23px] border-[3px] border-[#212531] bg-transparent p-[28px] sm:h-[450px] sm:items-center sm:justify-start lg:h-[393px] lg:max-w-[438px] "
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.7,
+          ease: [0.44, 0, 0.22, 0.99],
+        },
+      }}
+      viewport={{ amount: "some", once: true }}
+      className="relative mx-auto flex h-[520px] w-full max-w-[540px] flex-col items-start justify-between gap-6 rounded-[28px] border-[3px] border-[#212531] bg-[#181B23] p-[36px] shadow-xl transition-all duration-300 hover:scale-[1.025] hover:shadow-2xl sm:h-[520px] sm:items-center sm:justify-start lg:h-[480px] lg:max-w-[540px]"
     >
       <Image
         src={slash}
-        alt={"title"}
+        alt={"slash"}
         className="absolute top-[34px] left-[28px] w-[51px]"
       />
-
-      <p className="mt-10 text-[18px] font-[500] leading-relaxed tracking-wide text-[#e4ded7]">
-        {testimonial}
-      </p>
-
-      <div className="flex gap-3 sm:absolute sm:bottom-[28px] sm:left-[28px]">
+      <div className="flex gap-6 sm:absolute sm:bottom-[36px] sm:left-[36px]">
         <Image
           src={profileImg}
-          alt={"title"}
+          alt={name}
           width={1600}
           height={840}
           className="h-[41px] w-[41px] rounded-full bg-contain bg-center object-cover grayscale"
         />
-        <div className="flex flex-col gap-1 pr-7">
-          <h3 className="w-[176px] text-[23px] font-bold uppercase leading-[20.7px] tracking-[-0.46056px] text-[#e4ded7]">
-            {abbreviateName(name)}
+        <div className="flex flex-col gap-1 pr-7 sm:gap-2">
+          <h3 className="w-full text-[22px] font-bold uppercase leading-[28px] tracking-[-0.46056px] text-[#e4ded7] sm:text-[26px]">
+            {name}
           </h3>
-          <p className="text-sm font-[500] leading-[16px] text-[#95979D]">
-            {role} @ {company}
+          <p className="text-lg font-bold leading-[22px] text-[#e4ded7] sm:text-xl">
+            {company}
+          </p>
+          <p className="mt-0 text-sm font-medium leading-[18px] text-[#95979D] sm:text-base">
+            {date}
           </p>
         </div>
+      </div>
+      {/* Target the margin-top of the details section */}
+      <div className="mt-6 w-full sm:mt-12">
+        {" "}
+        {/* Changed mt-12 to mt-6 for smaller screens */}
+        <h4 className="mb-3 text-[16px] font-semibold uppercase tracking-wide text-[#e4ded7] sm:text-[18px]">
+          Details
+        </h4>
+        <p className="whitespace-pre-line break-words text-[15px] font-[500] leading-relaxed tracking-wide text-[#e4ded7] sm:text-[17px]">
+          {details}
+        </p>
       </div>
     </motion.div>
   );
 };
 
-export default BlogCard;
+export { WorkCard };
+export default WorkCard;
